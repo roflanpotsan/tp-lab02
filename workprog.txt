@@ -1,0 +1,48 @@
+mkdir tp-lab02
+cd tp-lab02
+git init
+touch readme.txt
+git add *
+git commit -m “init”
+hub create
+git remote add origin https://link
+git push -u origin master
+
+touch hello_world.cpp
+nano hello_world.cpp
+git add hello_world.cpp
+git commit -m “comment”
+nano hello_world.cpp
+git commit -a -m “comment”
+git push -u origin master
+
+git checkout -b patch1
+nano hello_world.cpp
+git add hello_world.pp
+git commit -m “c”
+git push -u origin patch1
+hub pull-request
+nano hello_world.cpp
+git commit -a -m “c”
+git push -u origin patch1
+…
+git push -d origin patch1
+git pull
+git checkout master
+git log
+git branch -d patch1
+
+git checkout -b patch2
+clang-format -style=Mozilla -i hello_world.cpp
+git commit -a -m “c”
+git push -u origin patch2
+hub pull-request
+git checkout master
+nano hello_world.cpp
+git commit, push
+git checkout patch2
+git rebase master
+nano hello_world.cpp
+git rebase —continue
+git push —force origin patch2
+…
